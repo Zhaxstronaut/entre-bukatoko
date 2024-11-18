@@ -1,0 +1,37 @@
+.custom-navbar {
+    background: rgba(40, 40, 40, 0.2); /* Warna abu-abu gelap transparan untuk efek glass */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(40, 40, 40, 0.3);
+    padding: 10px 20px;
+}
+
+/* Ubah warna hover link menjadi abu-abu terang */
+.custom-navbar .nav-link:hover {
+    color: #b0b0b0; /* Warna abu-abu terang */
+}
+
+/* Gradasi abu-abu ke hitam */
+.custom-navbar {
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(20, 20, 20, 0.9)); /* Gradasi abu-abu ke hitam */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #e0e0e0; /* Warna abu-abu terang untuk teks */
+}
+
+.navbar {
+    position: relative;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+/* Warna teks untuk link */
+.custom-navbar .nav-link {
+    color: #e0e0e0; /* Warna abu-abu terang */
+}
+

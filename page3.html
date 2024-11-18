@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BukaToko - FF Product</title>
+    <style>
+        /* Reset margin dan padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Desain container utama */
+        .iframe-container {
+            width: 100%;
+            height: 100vh; /* Membuat iframe memenuhi seluruh tinggi layar */
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Menampilkan iframe dengan responsif */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Untuk menambah kesan estetika, memberi sedikit margin pada iframe */
+        .iframe-container iframe {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container untuk navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Container untuk iframe -->
+    <div class="iframe-container">
+        <iframe src="https://genkit.framer.website/" title="Website Extern" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Memuat konten navbar.html ke dalam div dengan ID navbar-container
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
